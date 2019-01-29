@@ -1,0 +1,4 @@
+.Content {
+  /* 16px on top of the 56px toolbar height */
+  margin-top: 72px;
+}

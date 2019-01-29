@@ -1,0 +1,38 @@
+.SideDrawer {
+  /* always be on page static el */
+  position: fixed;
+  width: 280px;
+  /* for super narrow devices */
+  max-width: 70%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  /* sideDrawer z index should be above the backdrop */
+  z-index: 200;
+  background-color: white;
+  padding: 2em 1em;
+  box-sizing: border-box;
+  transition: transform 0.3s ease-out;
+}
+
+@media (min-width: 500px) {
+    .SideDrawer {
+        /* will not see sideDrawer on bigger devices */
+        display: none;
+    }
+}
+
+.Open {
+    /* shift sideDrawer into position */
+    transform: translateX(0);
+}
+
+.Close {
+    /* shift sideDrawer to the left... out of page */
+    transform: translateX(-100%);
+}
+
+.Logo {
+  height: 11%;
+  margin-bottom: 2em;
+}
