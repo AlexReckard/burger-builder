@@ -1,5 +1,5 @@
 import * as actionTypes from './actionTypes';
-import axios from '../../axios-orders';
+// import axios from '../../axios-orders';
 
 export const addIngredient = (name) => {
     return {
@@ -29,14 +29,18 @@ export const fetchIngredientsFailed = () => {
 };
 
 export const initIngredients = () => {
-    return dispatch => {
-      axios.get('https://burger-builder-1215.firebaseio.com/ingredients.json')
-          .then(response => {
-              // this.setState({ingredients: response.data});
-              dispatch(setIngredients(response.data));
-          })
-          .catch(error => {
-              dispatch(fetchIngredientsFailed())
-          });
+    return {
+        type: actionTypes.INIT_INGREDIENTS
     };
+    // now in sagas
+    // return dispatch => {
+    //   axios.get('https://burger-builder-1215.firebaseio.com/ingredients.json')
+    //       .then(response => {
+    //           // this.setState({ingredients: response.data});
+    //           dispatch(setIngredients(response.data));
+    //       })
+    //       .catch(error => {
+    //           dispatch(fetchIngredientsFailed())
+    //       });
+    // };
 };
