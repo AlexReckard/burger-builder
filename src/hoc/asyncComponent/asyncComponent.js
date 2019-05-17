@@ -21,3 +21,4 @@ const asyncComponent = (importComponent) => {
 };
 
 export default asyncComponent;
+// using React.lazy()
